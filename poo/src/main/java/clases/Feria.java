@@ -11,6 +11,8 @@ import java.util.ArrayList;
  *
  * @author USUARIO
  */
+// JaimeEscala
+
 public class Feria {
     private String nombre; 
     private String descripcion; 
