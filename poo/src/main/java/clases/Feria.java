@@ -30,7 +30,7 @@ public class Feria {
         this.horario = horario;
         this.lista_auspiciantes = lista_auspiciantes;
     }
-
+//kjasdkdnaknd
     public String getNombre() {
         return nombre;
     }
