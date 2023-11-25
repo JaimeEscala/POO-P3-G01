@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author USUARIO
  */
-// JaimeEscala
+// JaimeEscala.
 
 public class Feria {
     private String nombre; 
