@@ -10,8 +10,14 @@ package clases;
  */
 public class Auspiciante extends Persona{
     
-    public Auspiciante(String cedula, String nombre, String email){
-        super(cedula,nombre,email);
+    Feria codigoFeria;
+    int[] sectoresCubiertos = new int[4];
+    
+    public Auspiciante(String id, String nombre, String email, String sitioWeb, String telefono, String nResponsable, String direccion, int[] redesSociales, int[] sectoresCubiertos, Feria codigoFeria){
+        super(id,nombre,email, sitioWeb, telefono, nResponsable, direccion, redesSociales);
+        this.codigoFeria = codigoFeria;
+        this.sectoresCubiertos = sectoresCubiertos;
+        
     }
     
     
