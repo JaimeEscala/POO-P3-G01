@@ -14,6 +14,5 @@ public class Auspiciante extends Persona{
         super(cedula,nombre,email);
     }
     
-    //VALES VRG JAIME
     
 }
