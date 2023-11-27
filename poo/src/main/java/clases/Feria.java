@@ -4,7 +4,7 @@
  */
 package clases;
 
-
+import java.util.Random;
 import java.util.ArrayList;
 
 /**
@@ -14,6 +14,7 @@ import java.util.ArrayList;
 // JaimeEscala.
 
 public class Feria {
+    
     private String nombre; 
     private String descripcion; 
     private String lugar;
@@ -23,7 +24,7 @@ public class Feria {
     private ArrayList<Auspiciante> lista_auspiciantes;
     private ArrayList<Stand> lista_stands; 
 
-    public Feria(String nombre, String descripcion, String lugar, String fecha_inicio, String fecha_fin, String horario, ArrayList<Auspiciante> lista_auspiciantes) {
+    public Feria(String nombre, String descripcion, String lugar, String fecha_inicio, String fecha_fin, String horario, ArrayList<Auspiciante> lista_auspiciantes, ArrayList<Stand> lista_stands) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.lugar = lugar;
@@ -31,6 +32,7 @@ public class Feria {
         this.fecha_fin = fecha_fin;
         this.horario = horario;
         this.lista_auspiciantes = lista_auspiciantes;
+        this.lista_stands = lista_stands;
     }
 //kjasdkdnaknd
     public String getNombre() {
@@ -88,7 +90,26 @@ public class Feria {
     public void setLista_auspiciantes(ArrayList<Auspiciante> lista_auspiciantes) {
         this.lista_auspiciantes = lista_auspiciantes;
     }
+
+    public ArrayList<Stand> getLista_stands() {
+        return lista_stands;
+    }
+
+    public void setLista_stands(ArrayList<Stand> lista_stands) {
+        this.lista_stands = lista_stands;
+    }
     
+    public String toString(){
+        return "Codigo: " + getCodigo() + "\nNombre: " + getNombre() + "\nFecha inicio: " + getFecha_inicio() + "\nLugar: " + getLugar() + "\nCantidad de auspiciantes: " + getLista_auspiciantes();
+    }
 
-
+    public String getCodigo(){
+        Random r = new Random();
+        String codigo = "";
+        for(int i = 0; i<5; i++){
+            int digito = r.nextInt(10);
+            codigo += digito;
+        }
+        return codigo;
+    }
 }
