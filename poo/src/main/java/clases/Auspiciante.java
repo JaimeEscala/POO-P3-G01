@@ -10,15 +10,20 @@ package clases;
  */
 public class Auspiciante extends Persona{
     
-    Feria codigoFeria;
     int[] sectoresCubiertos = new int[4];
     
-    public Auspiciante(String id, String nombre, String email, String sitioWeb, String telefono, String nResponsable, String direccion, int[] redesSociales, int[] sectoresCubiertos, Feria codigoFeria){
+    public Auspiciante(String id, String nombre, String email, String sitioWeb, String telefono, String nResponsable, String direccion, String[] redesSociales, int[] sectoresCubiertos){
         super(id,nombre,email, sitioWeb, telefono, nResponsable, direccion, redesSociales);
-        this.codigoFeria = codigoFeria;
         this.sectoresCubiertos = sectoresCubiertos;
         
     }
     
+    public int[] getSectores(){
+        return this.sectoresCubiertos;
+    }
+    
+    public void setSectores(int[] sectoresCubiertos){
+        this.sectoresCubiertos = sectoresCubiertos;
+    }
     
 }

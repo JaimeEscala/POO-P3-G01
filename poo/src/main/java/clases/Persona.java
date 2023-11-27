@@ -15,11 +15,11 @@ public class Persona {
     private String sitioWeb; 
     private String telefono;
     private String nResponsable;
-    private int[] redesSociales = new int[7];
+    private String[] redesSociales = new String[7];
     private String direccion;
     
     
-    public Persona(String id, String nombre, String email, String sitioWeb, String telefono, String nResponsable, String direccion, int[] redesSociales){
+    public Persona(String id, String nombre, String email, String sitioWeb, String telefono, String nResponsable, String direccion, String[] redesSociales){
         this.id = id;
         this.nombre = nombre;
         this.email = email;
@@ -54,16 +54,12 @@ public class Persona {
         return nResponsable;
     }
 
-    public int[] getRedesSociales() {
+    public String[] getRedesSociales() {
         return redesSociales;
     }
 
     public String getDireccion() {
         return direccion;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public void setNombre(String nombre) {
@@ -86,12 +82,16 @@ public class Persona {
         this.nResponsable = nResponsable;
     }
 
-    public void setRedesSociales(int[] redesSociales) {
+    public void setRedesSociales(String[] redesSociales) {
         this.redesSociales = redesSociales;
     }
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+    
+    public String toString(){
+        return "Cedula o RUC: "+this.id+"\nNombre: "+this.nombre+"\nCorreo electronico: "+this.email+"\nSitio Web: "+this.sitioWeb+"\nTelefono: "+this.telefono+"\nNombre del Responsable: "+this.nResponsable+"\nDireccion: "+this.direccion+"\nRedes Sociales: "+this.redesSociales;
     }
     
     
