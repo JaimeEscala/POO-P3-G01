@@ -4,8 +4,7 @@
 
 package com.mycompany.poo;
 
-import clases.Feria;
-import clases.Secciones;
+import clases.*;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -16,6 +15,9 @@ import java.util.ArrayList;
 public class main {
 
     public static ArrayList<Feria> ferias = new ArrayList();
+    public static ArrayList<Stand> stands = new ArrayList();
+    
+    
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
@@ -121,6 +123,8 @@ public class main {
         System.out.println("Ingrese horario: ");
         String horarioF = sc1.nextLine();
         sc1.nextLine();
+        ArrayList<Auspiciante> auspicianteF = new ArrayList<>();
+        Feria objetoF = new Feria(nomF, desF, lugarF, fechaInF, fechaOutF, horarioF, auspicianteF, stands);
         
     }
     
