@@ -8,8 +8,6 @@ package clases;
  *
  * @author jaesc
  */
-public enum Secciones {
-    
-    Seccion1, Seccion2, Seccion3, Seccion4
-    
+public class Secciones {
+
 }
