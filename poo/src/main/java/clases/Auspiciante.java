@@ -10,7 +10,7 @@ package clases;
  */
 public class Auspiciante extends Persona{
     
-    int[] sectoresCubiertos = new int[4];
+    private int[] sectoresCubiertos = new int[4];
     
     public Auspiciante(String id, String nombre, String email, String sitioWeb, String telefono, String nResponsable, String direccion, String[] redesSociales, int[] sectoresCubiertos){
         super(id,nombre,email, sitioWeb, telefono, nResponsable, direccion, redesSociales);
@@ -18,12 +18,19 @@ public class Auspiciante extends Persona{
         
     }
     
-    public int[] getSectores(){
+    public int[] getSectoresCubiertos(){
         return this.sectoresCubiertos;
     }
     
-    public void setSectores(int[] sectoresCubiertos){
+    public void setSectoresCubiertos(int[] sectoresCubiertos){
         this.sectoresCubiertos = sectoresCubiertos;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nsectoresCubiertos: " + getSectoresCubiertos();
+    }
+    
+    
     
 }

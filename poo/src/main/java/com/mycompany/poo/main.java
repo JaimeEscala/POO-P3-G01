@@ -16,6 +16,8 @@ public class main {
 
     public static ArrayList<Feria> ferias = new ArrayList();
     public static ArrayList<Stand> stands = new ArrayList();
+    public static ArrayList<Auspiciante> auspiciantes = new ArrayList();
+    
     
     
     public static void main(String[] args) {
@@ -123,9 +125,8 @@ public class main {
         System.out.println("Ingrese horario: ");
         String horarioF = sc1.nextLine();
         sc1.nextLine();
-        ArrayList<Auspiciante> auspicianteF = new ArrayList<>();
-        Feria objetoF = new Feria(nomF, desF, lugarF, fechaInF, fechaOutF, horarioF, auspicianteF, stands);
-        
+        Feria objetoF = new Feria(nomF, desF, lugarF, fechaInF, fechaOutF, horarioF, auspiciantes, stands);
+        ferias.add(objetoF);
     }
     
     public static void distribucionStand(){
@@ -161,5 +162,58 @@ public class main {
             break;
         }
     }
+    
+    public static void registrarAuspiciante(){
+        
+        Scanner sc1 = new Scanner(System.in);
+        
+        System.out.println("Ingrese Número de cédula o RUC : ");
+        String id = sc1.nextLine();
+        sc1.nextLine();
+        System.out.println("Ingrese Nombre: ");
+        String nombre = sc1.nextLine();
+        sc1.nextLine();
+        System.out.println("Ingrese Nombre persona responsable: ");
+        String nResponsable = sc1.nextLine();
+        sc1.nextLine();
+        System.out.println("Ingresar Teléfono: ");
+        String telefono = sc1.nextLine();
+        sc1.nextLine();
+        System.out.println("Ingrese Email ");
+        String email = sc1.nextLine();
+        sc1.nextLine();
+        System.out.println("Ingrese Dirección: ");
+        String direccion = sc1.nextLine();
+        sc1.nextLine();
+        System.out.println("Ingrese Sitio web : ");
+        String sitioWeb = sc1.nextLine();
+        sc1.nextLine();
+        System.out.println("Ingresar Sectores cubieros con el formato sector1, sector2,... : ");
+        String sectoresCubiertos = sc1.nextLine(); 
+        sc1.nextLine();
+        System.out.println("Ingrese Nombres de cada red social que maneja: ");
+        String redesSociales = sc1.nextLine();
+        sc1.nextLine();
+        String[] arrayX = sectoresCubiertos.split(",");
+        int[] arraySectoresCubiertos = new int[arrayX.length];
+        for (int i = 0; i < arrayX.length; i++) {
+                arraySectoresCubiertos[i] = Integer.parseInt(arrayX[i]);
+        }
+        String[] arrayRedesSociales = redesSociales.split(",");
+        Auspiciante objetoA = new Auspiciante( id, nombre, email, sitioWeb, telefono, nResponsable, direccion, arrayRedesSociales, arraySectoresCubiertos);
+        for(Auspiciante c: auspiciantes){
+            if (c.getId().equals(id)){
+                System.out.println("El auspiciante ingresado ya esta registrado");
+            }
+            else {
+                auspiciantes.add(objetoA);
+            }
+        }
+    }
+    
+    public static void editarAuspiciante(){
+        
+    }
+    
 }
 
