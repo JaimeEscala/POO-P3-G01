@@ -1,98 +1,108 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package clases;
 
-/**
- *
- * @author USUARIO
- */
+import java.util.ArrayList;
+
 public class Persona {
-    private String id;
+    private String identificacion;
     private String nombre; 
-    private String email;
-    private String sitioWeb; 
     private String telefono;
-    private String nResponsable;
-    private String[] redesSociales = new String[7];
-    private String direccion;
-    
-    
-    public Persona(String id, String nombre, String email, String sitioWeb, String telefono, String nResponsable, String direccion, String[] redesSociales){
-        this.id = id;
+    private String email; 
+    private String direccion; 
+    private String sitio_web;
+    private String nombre_de_responsable;
+    private ArrayList<Socials> redes_sociales;
+
+    public Persona(String identificacion, String nombre, String telefono, String email, String nombre_de_responsable, ArrayList<Socials> redes_sociales) {
+        this.identificacion = identificacion;
         this.nombre = nombre;
-        this.email = email;
-        this.sitioWeb = sitioWeb;
         this.telefono = telefono;
-        this.nResponsable = nResponsable;
-        this.direccion = direccion;
-        this.redesSociales = redesSociales;
+        this.email = email;
+        this.nombre_de_responsable = nombre_de_responsable;
+        this.redes_sociales = redes_sociales;
     }
 
-    public String getId() {
-        return id;
+    public Persona(String identificacion, String nombre, String telefono, String email, String direccion, String nombre_de_responsable, ArrayList<Socials> redes_sociales) {
+       this(identificacion, nombre, telefono, email, nombre_de_responsable, redes_sociales);
+       this.direccion = direccion;
+    }
+    public Persona( ArrayList<Socials> socials,String id, String nom, String tel, String email, String sitio, String nomRespon){
+        this(id, nom, tel, email, nomRespon,socials);
+        this.sitio_web=sitio;
+    }
+    public Persona(String identificacion, String nombre,String telefono, String email, String direccion, String sitio_web, String nombre_responsable, ArrayList<Socials> redes){
+        this(redes, email, nombre, email, email, sitio_web, nombre);
+        this.sitio_web=sitio_web;
+        this.direccion=direccion;
+        
+    }
+
+    public String getIdentificacion() {
+        return identificacion;
+    }
+
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public String getSitioWeb() {
-        return sitioWeb;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getTelefono() {
         return telefono;
     }
 
-    public String getnResponsable() {
-        return nResponsable;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
-    public String[] getRedesSociales() {
-        return redesSociales;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getEmail() {
+        return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setSitioWeb(String sitioWeb) {
-        this.sitioWeb = sitioWeb;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public void setnResponsable(String nResponsable) {
-        this.nResponsable = nResponsable;
-    }
-
-    public void setRedesSociales(String[] redesSociales) {
-        this.redesSociales = redesSociales;
+    public String getDireccion() {
+        return direccion;
     }
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    
-    public String toString(){
-        return "Cedula o RUC: "+this.id+"\nNombre: "+this.nombre+"\nCorreo electronico: "+this.email+"\nSitio Web: "+this.sitioWeb+"\nTelefono: "+this.telefono+"\nNombre del Responsable: "+this.nResponsable+"\nDireccion: "+this.direccion+"\nRedes Sociales: "+this.redesSociales;
+
+    public String getSitio_web() {
+        return sitio_web;
     }
-    
-    
+
+    public void setSitio_web(String sitio_web) {
+        this.sitio_web = sitio_web;
+    }
+
+    public String getNombre_de_responsable() {
+        return nombre_de_responsable;
+    }
+
+    public void setNombre_de_responsable(String nombre_de_responsable) {
+        this.nombre_de_responsable = nombre_de_responsable;
+    }
+
+    public ArrayList<Socials> getRedes_sociales() {
+        return redes_sociales;
+    }
+
+    public void setRedes_sociales(ArrayList<Socials> redes_sociales) {
+        this.redes_sociales = redes_sociales;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" + "nombre=" + nombre + ", telefono=" + telefono + ", email=" + email + '}';
+    }
+        
 }
