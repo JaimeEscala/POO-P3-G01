@@ -4,9 +4,13 @@
  */
 package com.mycompany.feria_poo;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
@@ -15,6 +19,9 @@ import javafx.fxml.Initializable;
  */
 public class AdministracionEmprendedoresController implements Initializable {
 
+    @FXML
+    private ImageView btregresar2;
+
     /**
      * Initializes the controller class.
      */
@@ -22,5 +29,14 @@ public class AdministracionEmprendedoresController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void regresar2(MouseEvent event) {
+        try {
+            App.setRoot("primary");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
     
 }

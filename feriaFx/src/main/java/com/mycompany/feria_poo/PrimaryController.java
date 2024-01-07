@@ -31,10 +31,20 @@ public class PrimaryController {
 
     @FXML
     private void administrarEmprendedores(MouseEvent event) {
+        try {
+            App.setRoot("administracionEmprendedores");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
     @FXML
     private void administradorAuspiciantes(MouseEvent event) {
+        try {
+            App.setRoot("administracionAuspiciante");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
     @FXML
