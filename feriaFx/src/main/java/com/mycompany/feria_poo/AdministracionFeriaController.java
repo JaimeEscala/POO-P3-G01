@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
@@ -21,6 +22,18 @@ public class AdministracionFeriaController implements Initializable {
 
     @FXML
     private ImageView btregresar;
+    @FXML
+    private Button btdetalles;
+    @FXML
+    private Button btnuevaFeria;
+    @FXML
+    private Button bteditar;
+    @FXML
+    private Button btverempre;
+    @FXML
+    private Button btveraus;
+    @FXML
+    private Button btverstans;
 
     /**
      * Initializes the controller class.
@@ -37,6 +50,30 @@ public class AdministracionFeriaController implements Initializable {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+    }
+
+    @FXML
+    private void detalles(MouseEvent event) {
+    }
+
+    @FXML
+    private void nuevaFeria(MouseEvent event) {
+    }
+
+    @FXML
+    private void editar(MouseEvent event) {
+    }
+
+    @FXML
+    private void verEmprendedores(MouseEvent event) {
+    }
+
+    @FXML
+    private void verAuspiciantes(MouseEvent event) {
+    }
+
+    @FXML
+    private void verStans(MouseEvent event) {
     }
     
 }
