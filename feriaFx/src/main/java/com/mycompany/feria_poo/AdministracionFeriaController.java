@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
@@ -34,6 +35,8 @@ public class AdministracionFeriaController implements Initializable {
     private Button btveraus;
     @FXML
     private Button btverstans;
+    @FXML
+    private ListView<?> lsferia;
 
     /**
      * Initializes the controller class.
@@ -74,6 +77,10 @@ public class AdministracionFeriaController implements Initializable {
 
     @FXML
     private void verStans(MouseEvent event) {
+    }
+
+    @FXML
+    private void listaFeria(MouseEvent event) {
     }
     
 }
